@@ -1,0 +1,8 @@
+.idea/
+src/
+test/
+example/
+.travis.yml
+/tsconfig.json
+yarn.lock
+lib/**/*.js.map

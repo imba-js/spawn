@@ -1,0 +1,43 @@
+{
+	"name": "@imba/spawn",
+	"description": "Wrapper for child process spawning",
+	"keywords": [
+		"process",
+		"spawn"
+	],
+	"version": "0.0.1",
+	"license": "MIT",
+	"author": {
+		"name": "David Kudera",
+		"email": "kudera.d@gmail.com",
+		"url": "https://www.davidkudera.com/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/imba-js/spawn"
+	},
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"bin": {
+		"imba": "./lib/main.js"
+	},
+	"dependencies": {
+		"@imba/event-emitter": "^0.0.2"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.1.2",
+		"@types/mocha": "^2.2.48",
+		"@types/node": "^9.4.6",
+		"chai": "^4.1.2",
+		"mocha": "^5.0.2",
+		"ts-node": "^5.0.1",
+		"typescript": "^2.7.2"
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc --watch",
+		"test": "mocha -r ts-node/register test/tests/**/*.ts",
+		"prepublish": "yarn run build",
+		"pretest": "yarn run build"
+	}
+}
